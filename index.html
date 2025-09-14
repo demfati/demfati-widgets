@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =====  SHAREABLE DEMO PAGE  ===== -->
+  <meta charset="UTF-8">
+  <title>Demfati Widget – Live Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 1.  DOMAIN VERIFICATION (replace YOUR_SITE_TOKEN) -->
+  <meta name="dmf-domain-verification" content="YOUR_SITE_TOKEN">
+
+  <!-- 2.  OPEN-GRAPH / TWITTER  -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Demfati Widget – Live Demo">
+  <meta property="og:description" content="Zero-dependency drop-in library for voting, ticket & form widgets.">
+  <meta property="og:image" content="https://demfati.com/og-image.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Demfati Widget – Live Demo">
+  <meta property="twitter:description" content="Zero-dependency drop-in library for voting, ticket & form widgets.">
+  <meta property="twitter:image" content="https://demfati.com/og-image.png">
+
+  <!-- 3.  WIDGET LOADER  -->
+  <script src="https://cdn.demfati.com/widgets/demfati-widget.js" defer></script>
+
+  <!-- 4.  QUICK THEME  -->
+  <style>
+    :root {
+      --primary: #048bff;
+      --bg: #f8fafc;
+      --text: #111827;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, .06);
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.2rem 1rem;
+      box-shadow: var(--shadow);
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -.5px;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.5rem 0 1rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: .5rem;
+    }
+    .note {
+      background: #e0f2fe;
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1.5rem 0;
+      font-size: .95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: .9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Demfati Widget – Live Demo</div>
+  </header>
+
+  <main>
+    <h1>👋&nbsp; Hello! This is a live demo page</h1>
+    <p>
+      Replace <code>YOUR_SITE_TOKEN</code> in the <code>&lt;meta&gt;</code> tag and push this file to GitHub Pages.
+      After that you can share the link anywhere.
+    </p>
+
+    <!-- =====  VOTING WIDGET  ===== -->
+    <h2>🗳️ &nbsp;Voting Gallery</h2>
+    <div class="demfati-widget" data-type="voting" data-request="DEMO_EVENT"></div>
+
+    <!-- =====  TICKET WIDGET  ===== -->
+    <h2>🎫 &nbsp;Ticket Store</h2>
+    <div class="demfati-widget" data-type="tickets" data-request="DEMO_EVENT"></div>
+
+    <!-- =====  FORM WIDGET  ===== -->
+    <h2>📝 &nbsp;Form Attachment</h2>
+    <div class="demfati-widget" data-type="forms" data-request="DEMO_FORM"></div>
+
+    <div class="note">
+      <strong>Tip:</strong> Widgets auto-initialise when they scroll into view.  
+      Open DevTools → Console to verify domain verification.
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Demfati – All rights reserved.
+  </footer>
+
+  <script>
+    // auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
