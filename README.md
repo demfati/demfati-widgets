@@ -93,7 +93,7 @@ Every domain must be verified with a token from the Demfati Dashboard.
 
 | Key                   | Type                        | Default   | Description |
 |-----------------------|-----------------------------|-----------|-------------|
-| `sort`                | `'name' | 'code' | 'votes'` | original  | Contestant sorting order |
+| `sort`                | `name | code | votes` | original  | Contestant sorting order |
 | `search`              | `boolean`                   | true      | Toggle search bar in voting widget |
 | `customRenderContestant` | `function`                | undefined | Custom contestant card renderer |
 
