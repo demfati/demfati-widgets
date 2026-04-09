@@ -22,7 +22,7 @@ Add the domain verification meta tag inside `<head>`:
 Then load the script:
 
 ```html
-<script src="https://cdn.demfati.com/widgets/demfati-widget.js" defer></script>
+<script src="https://api.demfati.com/demfati-widget.js" defer></script>
 ```
 
 ---
@@ -113,7 +113,7 @@ Every domain must be verified with a token from the Demfati Dashboard.
 
 ```tsx
 useEffect(() => {
-  import('https://cdn.demfati.com/widgets/demfati-widget.js').then(() => {
+  import('https://api.demfati.com/demfati-widget.js').then(() => {
     dmfwl.init({ sort: 'votes' });
   });
 }, []);
@@ -131,7 +131,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   const script = document.createElement('script');
-  script.src = 'https://cdn.demfati.com/widgets/demfati-widget.js';
+  script.src = 'https://api.demfati.com/demfati-widget.js';
   script.onload = () => dmfwl.init({ search: true });
   document.head.appendChild(script);
 });
@@ -142,7 +142,7 @@ onMounted(() => {
 
 ```html
 <meta name="dmf-domain-verification" content="YOUR_TOKEN">
-<script src="https://cdn.demfati.com/widgets/demfati-widget.js" defer></script>
+<script src="https://api.demfati.com/demfati-widget.js" defer></script>
 <div class="demfati-widget" data-type="tickets" data-request="WORDCAMP_LAGOS"></div>
 ```
 
